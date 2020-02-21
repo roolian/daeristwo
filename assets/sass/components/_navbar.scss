@@ -1,0 +1,65 @@
+.navbar {
+    transition: all 0.3s;
+    background-color: rgba(29, 25, 27, 0.5);
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1d191b+0,1d191b+100&1+0,0+98 */
+    background: -moz-linear-gradient(top, rgba(29, 25, 27, 1) 0%, rgba(29, 25, 27, 0) 98%, rgba(29, 25, 27, 0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(29, 25, 27, 1) 0%, rgba(29, 25, 27, 0) 98%, rgba(29, 25, 27, 0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(29, 25, 27, 1) 0%, rgba(29, 25, 27, 0) 98%, rgba(29, 25, 27, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1d191b', endColorstr='#001d191b',GradientType=0 ); /* IE6-9 */
+
+    .navbar-brand,
+    .navbar-tabs {
+        transition: all 0.4s;
+    }
+    .navbar-item,
+    .navbar-link {
+        transition: all 0.4s;
+    }
+
+    .menu-item {
+        text-transform: uppercase;
+        font-size: 1.1em;
+        @include until($desktop) {
+            color: rgba(28, 75, 91);
+            padding: 2rem 1.5rem;
+            font-size: 1.5em;
+        }
+    }
+
+    .navbar-item {
+        &.is-active {
+            background: rgba(28, 75, 91);
+        }
+    }
+
+    &.pinned {
+        min-height: 3rem;
+        //background-color: rgba(28, 75, 91, 0.95);
+        background-color: rgba(29, 25, 27, 0.90);
+
+        .navbar-brand,
+        .navbar-tabs {
+            min-height: 1rem;
+        }
+
+        .navbar-item {
+            @include from($desktop) {
+                padding: 0 0.75rem;
+            }
+        }
+
+        .navbar-item img {
+        }
+    }
+}
+
+.page-template-template-simple-page {
+    .navbar {
+        background: rgba(29, 25, 27, 1);
+        filter: unset;
+
+        &.pinned {
+            background-color: rgba(29, 25, 27, 0.90);
+        }
+    }
+}

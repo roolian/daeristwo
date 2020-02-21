@@ -1,0 +1,77 @@
+@mixin titleFont() {
+    font-family: "Varela Round", sans-serif;
+}
+
+@mixin demi-line-center($color: currentColor) {
+    background: linear-gradient(90deg, rgba(255,255,255,0) 25%, $color 25%, $color 75%, rgba(255,255,255,0) 75%);
+}
+
+@mixin demi-line-left($color: currentColor) {
+    background: linear-gradient(90deg,  $color 50%, rgba(255,255,255,0) 50%);
+}
+
+@mixin prepend-icon($icon: "star", $size: 28px, $left: 0px, $color: inherit) {
+    position: relative;
+    &:before {
+        content: $icon !important;
+        font-family: "Material Icons";
+        height: $size;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: $left;
+        transform: translateY(-50%);
+        z-index: 10;
+        font-size: $size;
+        line-height: $size;
+        color: $color;
+        font-feature-settings: "liga";
+        text-transform: initial;
+    }
+}
+@mixin append-icon($icon: "star", $size: 28px, $right: 0px, $color: inherit) {
+    position: relative;
+    &:before {
+        content: $icon !important;
+        font-family: "Material Icons";
+        height: $size;
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: $right;
+        transform: translateY(-50%);
+        z-index: 10;
+        font-size: $size;
+        line-height: $size;
+        color: $color;
+        font-feature-settings: "liga";
+        text-transform: initial;
+    }
+}
+
+@mixin insert-icon($icon: "star", $size: 28px, $color: inherit) {
+    &:before {
+        content: $icon !important;
+        font-family: "Material Icons";
+        display: block;
+        font-size: $size;
+        line-height: 1em;
+        color: $color;
+        font-feature-settings: "liga";
+        text-transform: initial;
+    }
+}
+
+@mixin add-overlay($opacity: 0.5) {
+    position: relative;
+    &:before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        display: block;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, $opacity);
+    }
+}

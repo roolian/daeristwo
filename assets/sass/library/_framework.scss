@@ -1,0 +1,45 @@
+/**
+Customize BULMA
+**/
+$link-hover: white;
+$body-size: 14px;
+$fullhd-enabled: false;
+$block-spacing: 1rem;
+
+/**
+Customize NAVBAR
+**/
+
+$navbar-background-color: white;
+$navbar-item-color: white;
+$navbar-item-active-color: white;
+$navbar-burger-color: white;
+$navbar-height: 3.8rem;
+$navbar-padding-vertical: 0.75rem;
+$navbar-padding-horizontal: 1.5rem;
+$navbar-item-img-max-height: 3.2rem;
+
+$navbar-item-hover-color: white;
+$navbar-item-hover-background-color: rgba(255, 255, 255, 0.1);
+
+$text-strong: inherit;
+
+
+
+$body-family: 'Source Sans Pro', "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+
+@import "~bulma/bulma";
+@import "~bulma-tooltip";
+
+
+.content {
+    ul, ol {
+        margin-left: 0.5em;
+        margin-top: 0.5em;
+    }
+
+    h4 {
+        color: $red1
+    }
+
+}

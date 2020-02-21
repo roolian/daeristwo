@@ -1,0 +1,93 @@
+.single-reference {
+    .section-title {
+        background: #eeeeee center center no-repeat;
+        background-size: cover;
+        background-position: 50% 0px;
+        color: white;
+        text-align: center;
+        min-height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include add-overlay(0.6);
+
+        .h1 {
+            margin-top: 20px;
+        }
+
+        .arrow {
+            height: 20px;
+            @include insert-icon("arrow_drop_down", 2.8em);
+        }
+    }
+
+    .section-details {
+        $spacing: 20px;
+
+        .box-details {
+            position: relative;
+            top: -20vh;
+            background: $hotBlack;
+            color: white;
+            padding-bottom: 1px;
+            @include from($tablet) {
+                margin: 0 10%;
+            }
+            @include from($desktop) {
+                display: flex;
+                align-items: stretch;
+                justify-content: stretch;
+                align-content: stretch;
+
+            }
+
+            
+        }
+
+        .detail-table {
+            font-size: 1.6em;
+            background: rgba(255, 255, 255, 0.03);
+            align-self: stretch;
+            @include from($desktop) {
+                width: 40%;
+            }
+
+            tr:not(:last-child) {
+                border-bottom: 1px solid rgba(200, 200, 200, 0.25);
+            }
+
+            td {
+                padding-top: 1.2em;
+                padding-bottom: 1.2em;
+            }
+
+            td.labelize {
+                color: $green2;
+                font-weight: 400;
+                text-align: right;
+            }
+        }
+
+        .detail-text {
+            @include from($desktop) {
+                width: 60%;
+            }
+            padding: 1.6em;
+            margin: 1.6em;
+            font-weight: 300;
+            background: rgba(0, 0, 0, 0.14);
+            font-size: 1.1em;
+        }
+    }
+
+    .section-more {
+        position: relative;
+        top: -20vh;
+
+        .h2 {
+            //margin-top: 1.2em;
+            margin-bottom: 1.2em;
+        }
+    }
+}

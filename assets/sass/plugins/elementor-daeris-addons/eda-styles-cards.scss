@@ -1,0 +1,67 @@
+@import '../../variables';
+@import '../../mixins';
+
+
+.card-item {
+    box-shadow: 1px 2px 12px 0 rgba(0,0,0,0.19)!important;
+    border-radius: 8px;
+    overflow: hidden;
+    display: block;
+    color: inherit;
+    transition: all 0.4s $easeInOutQuad;
+
+    &:hover {
+        color: inherit;
+        transform: translateY(-10px);
+    }
+}
+
+.card-item-header {
+  padding-top: 42%;
+  background-size: cover;
+  background-position: center center;
+  //border-radius: 8px 8px 0 0;
+
+  &:before {
+    content: "" width;
+  }
+}
+
+.card-item-body {
+    padding: 25px;
+    //min-height: 200px;
+
+    .title {
+        font-size: 2em;
+    }
+
+    h4 {
+        color: $red1
+    }
+
+    ul {
+        margin-left: 0;
+    }
+    ul li {
+        list-style-type: none;
+        padding-left: 2em;
+        @include prepend-icon("arrow_right", 1.4em);
+        &:before {
+            top: 0.6em;
+        }
+    }
+}
+.card-item-footer { 
+    padding: 0 25px 25px 25px;
+    text-align: right;
+
+    .card-item-button {
+        text-transform: uppercase;
+        font-weight: 600;
+        padding-right: 20px;
+        display: inline-block;
+        padding-left: 20px;
+
+        @include append-icon("chevron_right", 1.2em, 0px, #F0474B);
+    }
+}
