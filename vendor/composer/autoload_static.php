@@ -22,6 +22,10 @@ class ComposerStaticInit04eaca11e579cc1d17903cd1c9eb4912
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Polyfill\\Ctype\\' => 23,
         ),
+        'D' => 
+        array (
+            'Daeristwo\\' => 10,
+        ),
         'C' => 
         array (
             'Composer\\Installers\\' => 20,
@@ -44,6 +48,10 @@ class ComposerStaticInit04eaca11e579cc1d17903cd1c9eb4912
         'Symfony\\Polyfill\\Ctype\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
+        ),
+        'Daeristwo\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
         ),
         'Composer\\Installers\\' => 
         array (

@@ -1,18 +1,15 @@
-<!DOCTYPE html>
+<?php
+/**
+ * Third party plugins that hijack the theme will call wp_head() to get the header template.
+ * We use this to start our output buffer and render into the view/page-plugin.twig template in footer.php
+ *
+ * If you're not using a plugin that requries this behavior (ones that do include Events Calendar Pro and
+ * WooCommerce) you can delete this file and footer.php
+ *
+ * @package  WordPress
+ * @subpackage  Timber
+ * @since   Timber 0.1
+ */
 
-<html class="no-js" <?php language_attributes(); ?>>
-
-	<head>
-
-		<meta charset="<?php bloginfo( 'charset' ); ?>">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" >
-
-		<link rel="profile" href="https://gmpg.org/xfn/11">
-
-		<?php wp_head(); ?>
-
-	</head>
-
-	<body <?php body_class(); ?>>
-
-    <?php get_template_part('template-parts/header'); ?>
+$GLOBALS['timberContext'] = Timber::context();
+ob_start();

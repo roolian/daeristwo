@@ -3,5 +3,10 @@
     "description": "Wp Theme",
     "require": {
         "timber/timber": "^1.15"
+    },
+    "autoload": {
+        "psr-4" : {
+            "Daeristwo\\" : "src/"
+        }
     }
 }

@@ -1,28 +1,21 @@
-<footer id="site-footer" role="contentinfo" class="header-footer-group">
+<?php
+/**
+ * Third party plugins that hijack the theme will call wp_footer() to get the footer template.
+ * We use this to end our output buffer (started in header.php) and render into the view/page-plugin.twig template.
+ *
+ * If you're not using a plugin that requries this behavior (ones that do include Events Calendar Pro and
+ * WooCommerce) you can delete this file and header.php
+ *
+ * @package  WordPress
+ * @subpackage  Timber
+ * @since   Timber 0.1
+ */
 
-    <div class="section-inner">
-
-        <div class="footer-credits">
-
-            <p class="footer-copyright">&copy;
-                <?php
-                echo date_i18n(
-                    /* translators: Copyright date format, see https://secure.php.net/date */
-                    _x('Y', 'copyright date format', 'daeristwo')
-                );
-                ?>
-                <a href="<?php echo esc_url(home_url('/')); ?>"><?php echo bloginfo('name'); ?></a>
-            </p><!-- .footer-copyright -->
-
-
-        </div><!-- .footer-credits -->
-
-    </div><!-- .section-inner -->
-
-</footer><!-- #site-footer -->
-
-<?php wp_footer(); ?>
-
-</body>
-
-</html>
+$timberContext = $GLOBALS['timberContext']; // @codingStandardsIgnoreFile
+if ( ! isset( $timberContext ) ) {
+	throw new \Exception( 'Timber context not set in footer.' );
+}
+$timberContext['content'] = ob_get_contents();
+ob_end_clean();
+$templates = array( 'page-plugin.twig' );
+Timber::render( $templates, $timberContext );
