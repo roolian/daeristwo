@@ -1,0 +1,7 @@
+{
+    "name": "daeris/daeristwo",
+    "description": "Wp Theme",
+    "require": {
+        "timber/timber": "^1.15"
+    }
+}

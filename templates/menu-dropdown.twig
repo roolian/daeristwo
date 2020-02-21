@@ -1,0 +1,6 @@
+{% for item in items %}
+    <a class="navbar-item {{ item.classes | join(' ') }}" target="{{ item.target }}" href="{{ item.link }}">
+        {{ item.title }}
+    </a>
+    {% include "menu.twig" with {'items': item.children} %}
+{% endfor %}

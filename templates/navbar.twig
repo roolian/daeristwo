@@ -1,0 +1,21 @@
+<nav class="navbar is-fixed-top is-spaced" role="navigation" aria-label="main navigation" id="mainNavbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="{{site.url}}">
+                    {{site.name}}
+                </a>
+
+                <a role="button" class="burger navbar-burger" tabindex="1" data-target="primary-menu" aria-controls="primary-menu" aria-haspopup="true" aria-label="Menu Button" aria-pressed="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="primary-menu" class="navbar-menu">
+                <div class="navbar-end">
+                    {% include "menu.twig" with {'items': items} %}
+                </div>
+            </div>
+        </div>
+    </nav>

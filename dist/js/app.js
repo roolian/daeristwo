@@ -181,27 +181,15 @@ function onFilterReferences(e) {
 
 /***/ }),
 
-/***/ "./assets/sass/plugins/elementor-daeris-addons/eda-styles-cards.scss":
-/*!***************************************************************************!*\
-  !*** ./assets/sass/plugins/elementor-daeris-addons/eda-styles-cards.scss ***!
-  \***************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
 /***/ 0:
-/*!***************************************************************************************************************************!*\
-  !*** multi ./assets/js/app.js ./assets/sass/app.scss ./assets/sass/plugins/elementor-daeris-addons/eda-styles-cards.scss ***!
-  \***************************************************************************************************************************/
+/*!*******************************************************!*\
+  !*** multi ./assets/js/app.js ./assets/sass/app.scss ***!
+  \*******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! C:\www\oxygen\wp-content\themes\daeristwo\assets\js\app.js */"./assets/js/app.js");
-__webpack_require__(/*! C:\www\oxygen\wp-content\themes\daeristwo\assets\sass\app.scss */"./assets/sass/app.scss");
-module.exports = __webpack_require__(/*! C:\www\oxygen\wp-content\themes\daeristwo\assets\sass\plugins\elementor-daeris-addons\eda-styles-cards.scss */"./assets/sass/plugins/elementor-daeris-addons/eda-styles-cards.scss");
+module.exports = __webpack_require__(/*! C:\www\oxygen\wp-content\themes\daeristwo\assets\sass\app.scss */"./assets/sass/app.scss");
 
 
 /***/ }),

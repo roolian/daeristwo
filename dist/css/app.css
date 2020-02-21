@@ -12967,13 +12967,6 @@ table tbody {
 .navbar {
   transition: all 0.3s;
   background-color: rgba(29, 25, 27, 0.5);
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1d191b+0,1d191b+100&1+0,0+98 */
-  /* FF3.6-15 */
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #1d191b 0%, rgba(29, 25, 27, 0) 98%, rgba(29, 25, 27, 0) 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#1d191b", endColorstr="#001d191b",GradientType=0 );
-  /* IE6-9 */
 }
 
 .navbar .navbar-brand,

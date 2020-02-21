@@ -1,0 +1,24 @@
+{% if menu %}
+        {% for item in items %}
+                {% if item.children|length > 0 %}
+
+                    <div class="navbar-item has-dropdown">
+                        <a class="navbar-link {{ item.classes | join(' ') }}" target="{{ item.target }}" href="{{ item.link }}">
+                            {{ item.title }}
+                        </a>
+                        <div class="navbar-dropdown">
+                            {% include "menu-dropdown.twig" with {'items': item.children} %}
+                        </div>
+                    </div>
+
+                {% else %}
+
+                    <a class="navbar-item {{ item.classes | join(' ') }}" target="{{ item.target }}" href="{{ item.link }}">
+                        {{ item.title }}
+                    </a>
+                    
+                {% endif %}
+                
+                
+        {% endfor %}
+{% endif %}
