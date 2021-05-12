@@ -28,7 +28,7 @@
         "bulma": "^0.7.5",
         "bulma-extensions": "^6.2.7",
         "bulma-tooltip": "^3.0.2",
-        "swiper": "^5.2.0",
+        "swiper": "^6.5.1",
         "zepto": "^1.2.0"
     }
 }
